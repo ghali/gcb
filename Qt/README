@@ -1,0 +1,15 @@
+Epsilon_double:
+#include <limits>
+
+        { return numeric_limits<double>::min(); }
+        //{ return __DBL_MIN__; }
+        static double max() throw()
+        { return numeric_limits<double>::max(); }
+
+
+in
+splitting_2.h
+replace
+        if(pi + 1 == points.end())
+with
+        if(pi == points.end() - 1)

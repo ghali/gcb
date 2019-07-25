@@ -1,0 +1,16 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>msg.txt</file>
+    <file>canonical_clipping_cube.off</file>
+    <file>cube.off</file>
+    <file>cube_back_face.off</file>
+    <file>cube_top_face.off</file>
+    <file>cubetris.off</file>
+    <file>cylinder_12.off</file>
+    <file>cylinder_8.off</file>
+    <file>icosahedron-with-t.off</file>
+    <file>icosahedron.off</file>
+    <file>octahedron.off</file>
+    <file>tetrahedron.off</file>
+</qresource>
+</RCC>

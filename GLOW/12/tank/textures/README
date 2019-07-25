@@ -1,0 +1,12 @@
+Commands used to generate the textures:
+
+bggen darkred yellow blue red -r 45 -g 64x64  > terrainGradient.ppm
+
+bggen black red green blue purple black -r 45 -g 64x64 > movingTargetGradient.ppm
+
+bggen red blue green blue red -r 45 -g 64x64 > movingTargetGradient.ppm
+
+bggen red green blue green red green blue green red -r 45 -g 64x64 > movingTargetGradient.ppm
+
+bggen red blue green blue red blue green blue red -r 45 -g 64x64 > movingTargetGradient.ppm
+

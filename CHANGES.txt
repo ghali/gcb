@@ -1,0 +1,71 @@
+
+========================================================================
+This code is described in the book "Introduction to Geometric Computing"
+by Sherif Ghali, Springer-Verlag, 2008.
+========================================================================
+
+========================================================================
+Release 1.2 --- April 2011
+========================================================================
+
+- This release begins the translation of the code from GLOW to Qt.
+
+- Convex polytope classes are no longer specific to solid BSP classes.
+
+- Some minor changes are needed, such as writing #include <limits>
+  rather than #include <climits>.
+
+- C++ files now have the suffix cpp rather than C (an IRIX convention
+  that is now seldom used).
+
+- CRLF, rather than LF, is now the line ending. This is mainly because
+  Mac OS X and Linux accommodate DOS line endings gracefully, but not
+  vice-versa.
+
+- Reader & writer functions are now members of the image class.
+
+- Standard library header files are now included last, not first. This
+  reveals sooner when a geometry header file omits to include its own
+  necessary header files.
+
+- Qt is now gradually used in addition to GLOW. GLOW works perfectly
+  on Linux, Cygwin, and Mac OS X, but GLUT (on which GLOW is based) is
+  no longer easy to compile on Visual Studio on Windows. Using Qt also
+  means that project management (.pro and .pri) and resources (.qrc)
+  files can be streamlined between the three operating systems.
+  Ideally, the first release would have used Qt, but that would have
+  meant imposing a Qt license on readers. Qt was at the time not
+  available under LGPL.
+
+- Since almost all classes are parameterized, I had dispensed with
+  separating the interface from the implementation, but this is
+  sometimes unwieldy. In the future, implementation (still header)
+  files will be in separate _inl.h files.
+
+- The files for geometry classes are organized slightly differently,
+  by using, for example, "geometry/E2/.." rather than
+  "geometry_E2/..".
+
+Bugs:
+
+- By relying on relative paths (such as "../../../objects/"), the code
+  restricts the directory from which it can be launched. Qt resources,
+  which will also embed data files in the executable, should be used
+  instead.
+
+========================================================================
+Release 1.1 --- December 2008
+========================================================================
+
+- The header files are now included relative to a common root.
+
+- The Postscript class now supports viewports. The class remains
+  backwards compatible.
+
+- Tabs are now eliminated from the source files.
+
+========================================================================
+Release 1.0 --- February 2008
+========================================================================
+
+- Initial release.
